@@ -1,43 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
 body {
-  text-align: center;
-  background-image: url("./back.jpg");
+    margin:0;
+    font-family: Audiowide, sans-serif;
+    font-size: 1.5rem;
 }
 
-#first {
-  color: white;
-  font-family: 'Baloo Bhai', cursive;
-}
-
-.coolTitle {
-  text-align: center;
-  font-family: 'Oswald', Helvetica, sans-serif;
-  font-size: 40px;
-  transform: skewY(-3deg);
-  letter-spacing: 4px;
-  word-spacing: -8px;
-  color: #DDF2A1;
-  text-shadow: 
-    -1px -1px 0 firebrick,
-    -2px -2px 0 firebrick,
-    -3px -3px 0 firebrick,
-    -4px -4px 0 firebrick,
-    -5px -5px 0 firebrick,
-    -6px -6px 0 firebrick,
-    -7px -7px 0 firebrick,
-    -8px -8px 0 firebrick,
-    -30px 20px 40px dimgrey;
-}
-
-.done {
-  text-decoration: line-through;
+.calculator {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow-wrap: break-word;
 
 }
 
-ul {
-  list-style-position: inside;
-  margin-right: 90px;
-  font-family: 'Baloo Bhai', cursive;
-  color:white;
-  font-weight: 200;
+.display {
+    background: whitesmoke;
+    height: 100px;
+    width: 360px;
+    text-align: start;
+    padding: 20px
+}
+
+@media screen and (max-width: 900px){
+    .display {
+        height: 20vh;
+    }
+}
+
+
+.btns {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.btns button {
+    width:100%;
+    font-family: Audiowide, sans-serif;
+    font-size: 1.2rem;
+}
+
+button {
+    padding:40px
+}
+
+.equals {
+    grid-column: span 3;
 }
 
